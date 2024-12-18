@@ -10,10 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Placeholder")
-            Text("Teste")
-            Text("Teste 2")
-            TextField("Placeholder", text: .constant(""))
+            NavigationBar()
+            
+            Spacer()
         }
     }
 }
