@@ -12,6 +12,10 @@ struct ContentView: View {
         VStack {
             NavigationBar()
             
+            ScrollView(.vertical, showsIndicators: false) {
+                OrderTypeGridView()
+            }
+            
             Spacer()
         }
     }
