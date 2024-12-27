@@ -13,7 +13,10 @@ struct ContentView: View {
             NavigationBar()
             
             ScrollView(.vertical, showsIndicators: false) {
-                OrderTypeGridView()
+                VStack(spacing: 20) {
+                    OrderTypeGridView()
+                    CarouselTabView()
+                }
             }
             
             Spacer()
