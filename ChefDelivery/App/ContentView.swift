@@ -9,21 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            NavigationBar()
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 20) {
-                    OrderTypeGridView()
-                    CarouselTabView()
+        GeometryReader { geometry in
+            VStack {
+                NavigationBar()
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        OrderTypeGridView()
+                        CarouselTabView()
+                        StoresListView()
+                    }
                 }
+                
+                Spacer()
             }
-            
-            Spacer()
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(Color.gray.opacity(0.1))
     }
 }
 
-#Preview(traits: .sizeThatFitsLayout) {
+#Preview {
     ContentView()
 }
